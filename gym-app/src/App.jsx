@@ -1,12 +1,19 @@
 
+import { Route, Routes} from 'react-router-dom';
+import { Box } from '@mui/material';
+
 import './App.css'
 
 function App() {
 
   return (
-    <>
-      <h1>Hello world</h1>
-    </>
+    <Box width="400px">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/excercise/:id" element={<ExerciseDetail />} />
+      </Routes>
+    </Box>
   )
 }
 
